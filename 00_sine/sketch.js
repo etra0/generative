@@ -36,7 +36,7 @@ const sketch = () => {
       domain
         .map(d => ({
           x: (d*width/(2*Math.PI)),
-          y: Math.sin(d+v)*200
+          y: Math.sin(d+v)*300
         }))
         .map(({x, y}) => {
           context.beginPath()
