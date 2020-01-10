@@ -6,7 +6,7 @@ const scale = 1
 const settings = {
   //dimensions: [ 1080, 1350 ]
 	//dimensions: [ 1920*scale, 1080*scale ]
-	dimensions: [ 1080, 1080 ]
+	dimensions: [ 2048, 2048 ]
 };
 
 const sketch = () => {
@@ -95,7 +95,8 @@ const sketch = () => {
 				[...Array(resolution)]
 				.map((_, i) => i/(resolution - 1))
 				.forEach(v => {
-					context.strokeStyle = `hsla(${v*50 + randomColorPosition}, 60%, 50%, ${1.1 - v})`
+          // context.strokeStyle = `hsla(${v*50 + randomColorPosition}, 60%, 50%, ${1.1 - v})`
+          context.strokeStyle = `rgba(255, 255, 255, ${1.1 - v})`
 					const slx = lerp(sl.sx, sl.ex, v);
 					const elx = lerp(el.sx, el.ex, v);
 					context.beginPath();
